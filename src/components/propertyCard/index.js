@@ -6,7 +6,6 @@ import { FaCar } from "react-icons/fa";
 import { GrStatusPlaceholderSmall } from "react-icons/gr";
 
 const PropertyCard = ({ propertyDetails }) => {
-
   const { img, price, purpose, description, beds, washroom, cars, area } =
     propertyDetails;
   return (
