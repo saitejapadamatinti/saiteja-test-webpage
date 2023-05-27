@@ -1,0 +1,26 @@
+.header-main-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.header-logo {
+  width: 211.5px;
+  height: 47.15px;
+}
+
+.header-ul-items {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  gap: 25px;
+  align-items: center;
+}
+
+.header-book-now-btn {
+  width: 266.88px;
+  height: 60px;
+  color: #fff;
+  background-color: #0cc043;
+  border: 0;
+}

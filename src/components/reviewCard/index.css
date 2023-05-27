@@ -1,0 +1,25 @@
+.review-quote-card-white-div {
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  position: relative;
+}
+.review-quote-card-imag {
+  width: 100%;
+}
+.review-quote-card-text-div {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.review-star {
+  color: #ffc107;
+  margin-right: 5px;
+}
+.review-qote-image {
+  position: absolute;
+  top: -50px;
+  left: 30px;
+}

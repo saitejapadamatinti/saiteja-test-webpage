@@ -1,0 +1,26 @@
+.icon-card-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.icon-card-head {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: #003900;
+}
+.chose-card-icon {
+  font-size: 60px;
+  color: #0cc043;
+}
+.icon-card-para {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
