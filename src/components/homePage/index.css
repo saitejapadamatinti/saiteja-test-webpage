@@ -25,6 +25,11 @@
   text-transform: uppercase;
   color: #ffffff;
   border: none;
+  cursor: pointer;
+}
+.activeButton:hover{
+  transition: all 0.3s linear;
+  background-color: #026c22;
 }
 .in-active-button {
   width: 229.97px;
@@ -35,7 +40,14 @@
   text-transform: uppercase;
   color: #003900;
   background-color: transparent;
+  cursor: pointer;
 }
+
+.in-active-button:hover{
+  transition: all 0.3s linear;
+  background-color: #ececec;
+}
+
 
 .borderd-button {
   width: 304.79px;
@@ -100,6 +112,12 @@
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.banner-btn-cls:hover{
+  transition: all 0.3s linear;
+  background-color: #026c22;
 }
 
 /* meet real expet div css */
@@ -186,6 +204,7 @@
 }
 .inActive {
   color: #6c757d;
+  cursor: pointer;
 }
 .browse-the-heading-div {
   display: flex;
@@ -324,4 +343,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+.footer-main-div{
+  padding-bottom: 0px;
 }

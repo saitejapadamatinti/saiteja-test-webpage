@@ -2,10 +2,11 @@ import React from "react";
 import "./index.css";
 import { IoIosBed } from "react-icons/io";
 import { TbBathFilled } from "react-icons/tb";
-import {  FaCar } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
 import { GrStatusPlaceholderSmall } from "react-icons/gr";
 
 const PropertyCard = ({ propertyDetails }) => {
+
   const { img, price, purpose, description, beds, washroom, cars, area } =
     propertyDetails;
   return (
@@ -23,7 +24,7 @@ const PropertyCard = ({ propertyDetails }) => {
             {beds}
           </p>
           <p>
-            <TbBathFilled className="property-icon "/>
+            <TbBathFilled className="property-icon " />
             {washroom}
           </p>
           <p>

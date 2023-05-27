@@ -4,6 +4,10 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   position: relative;
+  transition: transform 250ms;
+}
+.blog-data-card-white-div:hover {
+  transform: translateY(-10px);
 }
 .blog-card-imag {
   width: 100%;

@@ -26,6 +26,10 @@
   text-transform: uppercase;
   color: #ffffff;
   border: none;
+  cursor: pointer;
 }
-
+.header-book-now-btn:hover{
+  transition: all 0.3s linear;
+  background-color: #026c22;
+}
 

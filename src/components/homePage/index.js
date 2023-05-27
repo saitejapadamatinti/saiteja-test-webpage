@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import Header from "../header";
 import PropertyCard from "../propertyCard";
@@ -31,11 +31,77 @@ const browseTheLatest = [
     area: "512m2",
   },
   {
-    type: "sale",
+    type: "rent",
     img: "referance-images/Area Real Estate (1)/Rectangle 50-2.png",
     price: "$760,000-$820,000",
     description: "23 Rutherford Grove, ARMSTRONG CREEK",
+    purpose: "FOR RENT",
+    beds: "4",
+    washroom: "2",
+    cars: "2",
+    area: "512m2",
+  },
+  {
+    type: "buy",
+    img: "referance-images/Area Real Estate (1)/Rectangle 50-3.png",
+    price: "$760,000-$820,000",
+    description: "23 Rutherford Grove, ARMSTRONG CREEK",
+    purpose: "FOR BUY",
+    beds: "4",
+    washroom: "2",
+    cars: "2",
+    area: "512m2",
+  },
+  {
+    type: "sale",
+    img: "referance-images/Area Real Estate (1)/Rectangle 50-4.png",
+    price: "$760,000-$820,000",
+    description: "23 Rutherford Grove, ARMSTRONG CREEK",
     purpose: "FOR SALE",
+    beds: "4",
+    washroom: "2",
+    cars: "2",
+    area: "512m2",
+  },
+  {
+    type: "rent",
+    img: "referance-images/Area Real Estate (1)/Rectangle 50-5.png",
+    price: "$760,000-$820,000",
+    description: "23 Rutherford Grove, ARMSTRONG CREEK",
+    purpose: "FOR RENT",
+    beds: "4",
+    washroom: "2",
+    cars: "2",
+    area: "512m2",
+  },
+  {
+    type: "buy",
+    img: "referance-images/Area Real Estate (1)/Rectangle 50.png",
+    price: "$760,000-$820,000",
+    description: "23 Rutherford Grove, ARMSTRONG CREEK",
+    purpose: "FOR BUY",
+    beds: "4",
+    washroom: "2",
+    cars: "2",
+    area: "512m2",
+  },
+  {
+    type: "rent",
+    img: "referance-images/Area Real Estate (1)/Rectangle 50-1.png",
+    price: "$760,000-$820,000",
+    description: "23 Rutherford Grove, ARMSTRONG CREEK",
+    purpose: "FOR RENT",
+    beds: "4",
+    washroom: "2",
+    cars: "2",
+    area: "512m2",
+  },
+  {
+    type: "buy",
+    img: "referance-images/Area Real Estate (1)/Rectangle 50-2.png",
+    price: "$760,000-$820,000",
+    description: "23 Rutherford Grove, ARMSTRONG CREEK",
+    purpose: "FOR BUY",
     beds: "4",
     washroom: "2",
     cars: "2",
@@ -53,22 +119,22 @@ const browseTheLatest = [
     area: "512m2",
   },
   {
-    type: "sale",
+    type: "buy",
     img: "referance-images/Area Real Estate (1)/Rectangle 50-4.png",
     price: "$760,000-$820,000",
     description: "23 Rutherford Grove, ARMSTRONG CREEK",
-    purpose: "Under construction",
+    purpose: "FOR BUY",
     beds: "4",
     washroom: "2",
     cars: "2",
     area: "512m2",
   },
   {
-    type: "sale",
+    type: "rent",
     img: "referance-images/Area Real Estate (1)/Rectangle 50-5.png",
     price: "$760,000-$820,000",
     description: "23 Rutherford Grove, ARMSTRONG CREEK",
-    purpose: "FOR SALE",
+    purpose: "FOR RENT",
     beds: "4",
     washroom: "2",
     cars: "2",
@@ -158,6 +224,14 @@ const blogData = [
 ];
 
 const HomePage = () => {
+  const [selectedTab, setSelecetdTab] = useState("sale");
+  const [filteredTabData, setFilteredTabData] = useState([]);
+  useEffect(() => {
+    const filteredData = browseTheLatest.filter(
+      (eachItem) => eachItem.type === selectedTab
+    );
+    setFilteredTabData(filteredData);
+  }, [selectedTab]);
   return (
     <>
       <div>
@@ -249,13 +323,28 @@ const HomePage = () => {
             </h2>
           </div>
           <div className="browse-the-tabs">
-            <p className="browse-the-each-tabs active">FOR SALE</p>
-            <p className="browse-the-each-tabs inActive">FOR BUY</p>
-            <p className="browse-the-each-tabs inActive">FOR RENT</p>
+            <p
+              onClick={() => setSelecetdTab("sale")}
+              className={selectedTab === "sale" ? " active" : " inActive"}
+            >
+              FOR SALE
+            </p>
+            <p
+              onClick={() => setSelecetdTab("buy")}
+              className={selectedTab === "buy" ? " active" : " inActive"}
+            >
+              FOR BUY
+            </p>
+            <p
+              onClick={() => setSelecetdTab("rent")}
+              className={selectedTab === "rent" ? " active" : " inActive"}
+            >
+              FOR RENT
+            </p>
           </div>
           <div className="browse-the-card-div">
-            {browseTheLatest.map((eachItem) => (
-              <div className="browse-the-card-width">
+            {filteredTabData.map((eachItem) => (
+              <div key={eachItem.id} className="browse-the-card-width">
                 <PropertyCard propertyDetails={eachItem} />
               </div>
             ))}
@@ -328,7 +417,7 @@ const HomePage = () => {
           <div className="blog-data-card">
             {blogData.map((each) => (
               <div className="blog-card-width" key={each.id}>
-                <BlogCard blogData = {each} />
+                <BlogCard blogData={each} />
               </div>
             ))}
           </div>
@@ -355,7 +444,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Footer Container */}
-      <div className="body-main-container containers-padding">
+      <div className="body-main-container containers-padding footer-main-div">
         <Footer />
       </div>
     </>
