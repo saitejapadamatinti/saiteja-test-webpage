@@ -322,7 +322,7 @@ const HomePage = () => {
               Australia
             </h2>
             <div>
-              <button className="activeButton">More from our blogs</button>
+              <button className="in-active-button">More from our blogs</button>
             </div>
           </div>
           <div className="blog-data-card">

@@ -18,9 +18,14 @@
 }
 
 .header-book-now-btn {
-  width: 266.88px;
+  width: 229.97px;
   height: 60px;
-  color: #fff;
-  background-color: #0cc043;
-  border: 0;
+  background: #0cc043;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
 }
+
+
