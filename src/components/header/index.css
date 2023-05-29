@@ -28,8 +28,34 @@
   border: none;
   cursor: pointer;
 }
-.header-book-now-btn:hover{
+.header-book-now-btn:hover {
   transition: all 0.3s linear;
   background-color: #026c22;
 }
 
+/* mobile header */
+
+.mobile-header-main-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo-mobile {
+  width: 150px;
+}
+.nav-mobile-items-div {
+  background-color: #fff;
+  position: fixed;
+  width: 70%;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 30px;
+}
+.header-ul-items-mobile {
+  list-style-type: none;
+}
+
+.header-icon-open{
+  color: #fff;
+}

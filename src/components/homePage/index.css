@@ -8,6 +8,7 @@
   width: 80%;
 }
 @media screen and (max-width: 576px) {
+ 
   .container {
     width: 90%;
   }
@@ -17,7 +18,7 @@
     text-align: center;
   }
   .containers-padding {
-    padding: 40px 0px !important;
+    padding: 50px 0px !important;
   }
   .activeButton {
     width: 167px !important;
@@ -128,6 +129,9 @@
   border: 1px solid #d9d9d9;
   padding-left: 20px;
   /* height: 40px; */
+}
+.mobile-button {
+  display: none;
 }
 .banner-btn-cls {
   width: 250px;
@@ -375,6 +379,44 @@
 
 /* mobile screen pages */
 
+/* banner page mobile */
+@media screen and (max-width: 576px) {
+  .mobile-button {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    height: 50px;
+    color: #fff;
+    background-color: #0cc043;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .banner-heading {
+    font-weight: 700;
+    font-size: 28px;
+  }
+  .banner-heading {
+    width: 100%;
+    text-align: left;
+  }
+  .banner-input-div {
+    width: 100%;
+    padding: 10px;
+  }
+  .banner-btn-cls {
+    display: none;
+  }
+  .banner-input {
+    height: 100%;
+  }
+  .banner-input-div {
+    height: 70px;
+  }
+}
+
 /* meet the page  */
 @media screen and (max-width: 576px) {
   .meet-real-expert-container {
@@ -450,14 +492,14 @@
 
 /* middle banne div page mobile */
 @media screen and (max-width: 576px) {
-  .middle-banner{
+  .middle-banner {
     padding: 50px 30px;
     gap: 30px;
   }
-  .middle-banner-width{
+  .middle-banner-width {
     width: 80%;
   }
-  .middle-banner-para{
+  .middle-banner-para {
     width: 90%;
   }
 }
@@ -480,5 +522,20 @@
 @media screen and (max-width: 576px) {
   .blog-heading {
     width: 80%;
+  }
+}
+
+/* footer page mobile page */
+@media screen and (max-width: 576px) {
+  .footer-container {
+    flex-direction: column;
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .footer-logo-icon {
+    left: 50px !important;
+  }
+  .footer-main-div {
+    padding-bottom: 0px !important;
   }
 }

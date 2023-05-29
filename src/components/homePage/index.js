@@ -250,6 +250,7 @@ const HomePage = () => {
                 />
                 <button className="banner-btn-cls">Get An Estimate</button>
               </div>
+              <button className="mobile-button">Get An Estimate</button>
             </div>
           </div>
         </div>
